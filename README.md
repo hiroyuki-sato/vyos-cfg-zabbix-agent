@@ -9,7 +9,7 @@ In build-iso directory.
 
     git clone http://github.com/vyos/build-iso
     cd build-iso/pkgs
-    wget 'http://repo.zabbix.com/zabbix/2.2/debian/pool/main/z/zabbix/zabbix-agent_2.2.1-1+wheezy_amd64.deb'
+    wget 'http://repo.zabbix.com/zabbix/2.2/debian/pool/main/z/zabbix/zabbix-agent_2.2.4-1+squeeze_amd64.deb'
     cd .. # top of build-ios 
     echo "zabbix-agent"  >> livecd/config.vyatta/chroot_local-packageslists/vyatta-extra.list
 
