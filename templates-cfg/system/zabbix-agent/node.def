@@ -1,0 +1,5 @@
+priority: 999
+help: Zabbix-agent configuration
+delete: sudo /usr/sbin/invoke-rc.d zabbix-agent stop 
+end: if [ -z "$VAR(port/@)" ]; then exit 0; fi
+     sudo /usr/sbin/invoke-rc.d zabbix-agent start

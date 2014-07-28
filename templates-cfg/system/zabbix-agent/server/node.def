@@ -1,0 +1,4 @@
+type: txt
+help: IP addresses (or hostnames) of Zabbix servers.
+create: sudo sed -i -e 's/^Server=.*/Server=$VAR(@)/' /etc/zabbix/zabbix_agentd.conf
+delete: sudo sed -i -e 's/^Server=.*/Server=127.0.0.1/' /etc/zabbix/zabbix_agentd.conf

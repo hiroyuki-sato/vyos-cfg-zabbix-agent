@@ -1,0 +1,6 @@
+e954954ad8330cf4463a3a0f95743cc1  opt/vyatta/share/vyatta-cfg/templates/system/zabbix-agents/node.def
+de65bc6be068f5edcda9c8e0456e5346  opt/vyatta/share/vyatta-cfg/templates/system/zabbix-agents/server/node.def
+c66f5d8e35c99de5628188783afc7728  opt/vyatta/share/vyatta-cfg/templates/system/zabbix-agents/server_address/node.def
+e45697472dec638f3f3c9639d5b894c1  usr/share/doc/vyos-cfg-zabbix-agents/README.Debian
+44a6caf189cf8442b5fc5d4720761471  usr/share/doc/vyos-cfg-zabbix-agents/changelog.gz
+f47791b30ba31c509b06c5d2e2e07c2f  usr/share/doc/vyos-cfg-zabbix-agents/copyright

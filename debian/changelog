@@ -1,0 +1,5 @@
+vyos-cfg-zabbix-agent (0.0.1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Hiroyuki Sato <hiroysato@gmail.com>  Sat, 26 Jul 2014 10:31:06 +0900

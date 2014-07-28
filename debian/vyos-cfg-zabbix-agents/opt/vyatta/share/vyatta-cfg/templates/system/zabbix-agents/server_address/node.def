@@ -1,0 +1,4 @@
+type: txt
+help: List of comma delimited IP:port (or hostname:port) active check.
+create: sudo sed -i -e 's/^ServerActive=.*/ServerActive=$VAR(@)$/' /etc/zabbix-agents/zabbix_agentd.conf
+delete: sudo sed -i -e '/^ServerActive=.*/ServerActive=127.0.0.1/' /etc/zabbix-agents/zabbix_agentd.conf

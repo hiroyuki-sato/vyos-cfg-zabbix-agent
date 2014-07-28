@@ -1,0 +1,4 @@
+type: txt
+help: IP:port (or hostname:port) pair of active check.
+create: sudo sed -i -e 's/^ServerActive=.*/ServerActive=$VAR(@)/' /etc/zabbix/zabbix_agentd.conf
+delete: sudo sed -i -e 's/^ServerActive=.*/ServerActive=127.0.0.1/' /etc/zabbix/zabbix_agentd.conf
