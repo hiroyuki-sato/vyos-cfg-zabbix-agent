@@ -1,9 +1,9 @@
-## Zabbix agents commands for VyOS
+## Zabbix agent commands for VyOS
 
-Zabbix agents commands for VyOS
+Zabbix agent commands for VyOS
 
 
-## Install zabbix-agents
+## Install zabbix-agent
 
 In build-iso directory.
 
@@ -13,21 +13,21 @@ In build-iso directory.
     cd .. # top of build-ios 
     echo "zabbix-agent"  >> livecd/config.vyatta/chroot_local-packageslists/vyatta-extra.list
 
-## Build vyos-cfg-zabbix-agents
+## Build vyos-cfg-zabbix-agent
 
     git clone http://github.com/hiroyuki-sato/vyos-cfg-zabbix-agent
     debuild -us -uc 
     cd ..
-    cp vyos-cfg-zabbix-agents_0.0.1_amd64.deb build-iso/pkgs    
+    cp vyos-cfg-zabbix-agent_0.0.1_amd64.deb build-iso/pkgs    
     cd build-iso # top of build-iso 
-    echo "vyos-cfg-zabbix-agents" >> livecd/config.vyatta/chroot_local-packageslists/vyatta-extra.list
+    echo "vyos-cfg-zabbix-agent" >> livecd/config.vyatta/chroot_local-packageslists/vyatta-extra.list
 
 and build iso image.
 
 
 ## Command reference.
 
-    set system zabbix-agents
-    set system zabbix-agents server 
-    set system zabbix-agents server_active
+    set system zabbix-agent
+    set system zabbix-agent server <ip_address:port>
+    set system zabbix-agent server_active <ip_addrss:port>
 
