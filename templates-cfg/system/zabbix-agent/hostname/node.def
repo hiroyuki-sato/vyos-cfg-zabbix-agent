@@ -1,0 +1,4 @@
+type: txt
+help: Hostname
+create: sudo sed -i -e 's/^Hostname=.*/Hostname=$VAR(@)/' /etc/zabbix/zabbix_agentd.conf
+delete: sudo sed -i -e 's/^Hostname=.*/Hostname=Zabbix server/' /etc/zabbix/zabbix_agentd.conf
