@@ -1,0 +1,4 @@
+#!/bin/bash
+
+find /etc/rc[S0-6].d -name '*zabbix*' -print | xargs rm
+
