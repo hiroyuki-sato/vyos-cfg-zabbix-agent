@@ -35,4 +35,4 @@ and build iso image.
     set system zabbix-agent log_file_size
     set system zabbix-agent log_remote_commands
     set system zabbix-agent server
-    set system zabbix-agent server_address
+    set system zabbix-agent server_active
