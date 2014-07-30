@@ -1,0 +1,12 @@
+type:  u32 
+default:  0
+help: debug level 0:no debug, 1:critical, 2:error, 3:warning 4:debug
+syntax:expression: $VAR(@) >= 0 && $VAR(@) <= 4 ; \
+        "Debug level must be in range 0 to 4"
+create: sudo sed -i -e '$ a \
+DebugLevel=$VAR(@)' /etc/zabbix/zabbix_agentd.conf
+
+delete: sudo sed -i -e '/^DebugLevel=$VAR(@)$/d' /etc/zabbix/zabbix_agentd.conf
+
+update: sudo sed -i -e '/^DebugLevel/c \
+DebugLevel=$VAR(@)' /etc/zabbix/zabbix_agentd.conf
