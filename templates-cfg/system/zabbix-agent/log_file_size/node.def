@@ -1,0 +1,7 @@
+type:  u32 
+default:  0
+help: Maximum size of log file in MB.
+syntax:expression: $VAR(@) >= 0 && $VAR(@) <= 1024 ; \
+	"File size must be in range 0 to 1024"
+create: sudo sed -i -e 's/^LogFileSize=.*/LogFileSize=$VAR(@)/' /etc/zabbix/zabbix_agentd.conf
+delete: sudo sed -i -e 's/^LogFileSize=.*/LogFileSize=0/' /etc/zabbix/zabbix_agentd.conf
