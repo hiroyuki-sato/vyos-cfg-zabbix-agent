@@ -1,0 +1,9 @@
+type: txt
+help: Optional parameter that defines an item used for getting host metadata.
+create: sudo sed -i -e '$ a \
+HostMetadata=$VAR(@)' /etc/zabbix/zabbix_agentd.conf
+
+delete: sudo sed -i -e '/^HostMetadata=$VAR(@)$/d' /etc/zabbix/zabbix_agentd.conf
+
+update: sudo sed -i -e '/^HostMetadata/c \
+HostMetadata=$VAR(@)' /etc/zabbix/zabbix_agentd.conf

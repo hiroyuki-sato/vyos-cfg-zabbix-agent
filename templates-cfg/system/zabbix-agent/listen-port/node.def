@@ -1,0 +1,12 @@
+type:  u32 
+default: 10050
+help: Listen port: 
+syntax:expression: $VAR(@) >= 1024 && $VAR(@) <= 32767 ; \
+        "Listen port must be in range 1024 to 32767"
+create: sudo sed -i -e '$ a \
+ListenPort=$VAR(@)' /etc/zabbix/zabbix_agentd.conf
+
+delete: sudo sed -i -e '/^ListenPort=$VAR(@)$/d' /etc/zabbix/zabbix_agentd.conf
+
+update: sudo sed -i -e '/^ListenPort/c \
+ListenPort=$VAR(@)' /etc/zabbix/zabbix_agentd.conf

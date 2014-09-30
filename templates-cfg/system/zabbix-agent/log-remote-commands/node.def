@@ -1,0 +1,12 @@
+type:  u32 
+default:  0
+help: Enable logging of executed shell commands as warnings.
+syntax:expression: $VAR(@) >= 0 && $VAR(@) <= 1 ; \
+        "Log remote commands must be 0 or 1"
+create: sudo sed -i -e '$ a \
+LogRemoteCommands=$VAR(@)' /etc/zabbix/zabbix_agentd.conf
+
+delete: sudo sed -i -e '/^LogRemoteCommands=$VAR(@)$/d' /etc/zabbix/zabbix_agentd.conf
+
+update: sudo sed -i -e '/^LogRemoteCommands/c \
+LogRemoteCommands=$VAR(@)' /etc/zabbix/zabbix_agentd.conf
