@@ -31,8 +31,19 @@ and build iso image.
     set system zabbix-agent debug-level
     set system zabbix-agent enable-remote-commands
     set system zabbix-agent hostname
+    set system zabbix-agent hostname-item
+    set system zabbix-agent listen-ip
     set system zabbix-agent listen-port
     set system zabbix-agent log-file-size
     set system zabbix-agent log-remote-commands
     set system zabbix-agent server
     set system zabbix-agent server-active
+    set system zabbix-agent allow-root
+    set system zabbix-agent buffer-send
+    set system zabbix-agent buffer-size
+    set system zabbix-agent host-metadata
+    set system zabbix-agent host-metadata-item
+    set system zabbix-agent max-lines-per-second
+    set system zabbix-agent refresh-active-checks
+    set system zabbix-agent start-agents
+    set system zabbix-agent timeout

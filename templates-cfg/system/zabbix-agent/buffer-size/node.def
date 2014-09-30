@@ -1,0 +1,12 @@
+type:  u32 
+default: 100
+help: Maximum number of values in a memory buffer.
+syntax:expression: $VAR(@) >= 2 && $VAR(@) <= 65535; \
+        "BufferSize must be in range 2 to 65535"
+create: sudo sed -i -e '$ a \
+BufferSize=$VAR(@)' /etc/zabbix/zabbix_agentd.conf
+
+delete: sudo sed -i -e '/^BufferSize=$VAR(@)$/d' /etc/zabbix/zabbix_agentd.conf
+
+update: sudo sed -i -e '/^BufferSize/c \
+BufferSize=$VAR(@)' /etc/zabbix/zabbix_agentd.conf

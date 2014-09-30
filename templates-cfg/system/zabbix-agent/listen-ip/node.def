@@ -1,0 +1,9 @@
+type: txt
+help: Listen IP addresses.
+create: sudo sed -i -e '$ a \
+ListenIP=$VAR(@)' /etc/zabbix/zabbix_agentd.conf
+
+delete: sudo sed -i -e '/^ListenIP=$VAR(@)$/d' /etc/zabbix/zabbix_agentd.conf
+
+update: sudo sed -i -e '/^ListenIP/c \
+ListenIP=$VAR(@)' /etc/zabbix/zabbix_agentd.conf

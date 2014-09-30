@@ -1,0 +1,12 @@
+type:  u32 
+default: 3
+help: Timeout seconds on processing.
+syntax:expression: $VAR(@) >= 1 && $VAR(@) <= 30; \
+        "Timeout must be in range 1 to 30"
+create: sudo sed -i -e '$ a \
+Timeout=$VAR(@)' /etc/zabbix/zabbix_agentd.conf
+
+delete: sudo sed -i -e '/^Timeout=$VAR(@)$/d' /etc/zabbix/zabbix_agentd.conf
+
+update: sudo sed -i -e '/^Timeout/c \
+Timeout=$VAR(@)' /etc/zabbix/zabbix_agentd.conf
