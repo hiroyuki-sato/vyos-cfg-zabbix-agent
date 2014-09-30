@@ -1,0 +1,11 @@
+type: txt
+help: Item used for generating Hostname.
+create: sudo sed -i -e '$ a \
+HostnameItem=$VAR(@)' /etc/zabbix/zabbix_agentd.conf && \
+sudo sed -i -e 's/^Hostname=/## Hostname=/' /etc/zabbix/zabbix_agentd.conf
+
+delete: sudo sed -i -e '/^HostnameItem=$VAR(@)$/d' /etc/zabbix/zabbix_agentd.conf && \
+sudo sed -i -e 's/^## Hostname=/Hostname=/' /etc/zabbix/zabbix_agentd.conf
+
+update: sudo sed -i -e '/^HostnameItem/c \
+HostnameItem=$VAR(@)' /etc/zabbix/zabbix_agentd.conf

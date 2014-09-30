@@ -1,0 +1,12 @@
+type:  u32 
+default: 120
+help: How often list of active checks is refreshed, in seconds.
+syntax:expression: $VAR(@) >= 60 && $VAR(@) <= 3600 ; \
+        "RefreshActiveChecks must be in range 60 to 3600"
+create: sudo sed -i -e '$ a \
+RefreshActiveChecks=$VAR(@)' /etc/zabbix/zabbix_agentd.conf
+
+delete: sudo sed -i -e '/^RefreshActiveChecks=$VAR(@)$/d' /etc/zabbix/zabbix_agentd.conf
+
+update: sudo sed -i -e '/^RefreshActiveChecks/c \
+RefreshActiveChecks=$VAR(@)' /etc/zabbix/zabbix_agentd.conf
