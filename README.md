@@ -47,3 +47,8 @@ and build iso image.
     set system zabbix-agent refresh-active-checks
     set system zabbix-agent start-agents
     set system zabbix-agent timeout
+
+## Developers
+
+* [Hiroyuki Sato/hiroysato](https://github.com/hiroyuki-sato)
+* [Yuya Kusakabe/higebu](https://github.com/higebu)
