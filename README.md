@@ -28,11 +28,11 @@ and build iso image.
 ## Command reference.
 
     set system zabbix-agent
-    set system zabbix-agent debug_level
-    set system zabbix-agent enable_remote_commands
+    set system zabbix-agent debug-level
+    set system zabbix-agent enable-remote-commands
     set system zabbix-agent hostname
-    set system zabbix-agent listen_port
-    set system zabbix-agent log_file_size
-    set system zabbix-agent log_remote_commands
+    set system zabbix-agent listen-port
+    set system zabbix-agent log-file-size
+    set system zabbix-agent log-remote-commands
     set system zabbix-agent server
-    set system zabbix-agent server_active
+    set system zabbix-agent server-active
