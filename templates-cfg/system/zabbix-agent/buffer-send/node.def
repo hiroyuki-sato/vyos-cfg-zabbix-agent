@@ -1,5 +1,4 @@
 type:  u32 
-default: 5
 help: Do not keep data longer than N seconds in buffer.
 syntax:expression: $VAR(@) >= 1 && $VAR(@) <= 3600; \
         "BufferSend must be in range 1 to 3600"

@@ -1,5 +1,4 @@
 type:  u32 
-default: 10050
 help: Listen port: 
 syntax:expression: $VAR(@) >= 1024 && $VAR(@) <= 32767 ; \
         "Listen port must be in range 1024 to 32767"
