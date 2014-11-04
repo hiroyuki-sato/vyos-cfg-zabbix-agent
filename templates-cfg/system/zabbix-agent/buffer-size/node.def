@@ -1,5 +1,4 @@
 type:  u32 
-default: 100
 help: Maximum number of values in a memory buffer.
 syntax:expression: $VAR(@) >= 2 && $VAR(@) <= 65535; \
         "BufferSize must be in range 2 to 65535"

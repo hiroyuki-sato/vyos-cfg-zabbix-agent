@@ -1,5 +1,4 @@
 type:  u32 
-default: 3
 help: Timeout seconds on processing.
 syntax:expression: $VAR(@) >= 1 && $VAR(@) <= 30; \
         "Timeout must be in range 1 to 30"

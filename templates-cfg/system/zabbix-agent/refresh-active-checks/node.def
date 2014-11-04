@@ -1,5 +1,4 @@
 type:  u32 
-default: 120
 help: How often list of active checks is refreshed, in seconds.
 syntax:expression: $VAR(@) >= 60 && $VAR(@) <= 3600 ; \
         "RefreshActiveChecks must be in range 60 to 3600"

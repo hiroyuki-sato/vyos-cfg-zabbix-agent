@@ -1,5 +1,4 @@
 type:  u32 
-default: 3
 help: Number of pre-forked instances of zabbix_agentd.
 syntax:expression: $VAR(@) >= 0 && $VAR(@) <= 100 ; \
         "StartAgents must be in range 0 to 100"

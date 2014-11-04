@@ -1,5 +1,4 @@
 type:  u32 
-default:  0
 help: Enable remote commands.
 syntax:expression: $VAR(@) >= 0 && $VAR(@) <= 1 ; \
         "Enable remote commands must be 0 or 1"

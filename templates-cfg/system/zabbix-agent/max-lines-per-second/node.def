@@ -1,5 +1,4 @@
 type:  u32 
-default: 100
 help: Maximum number of new lines the agent will send per second.
 syntax:expression: $VAR(@) >= 1 && $VAR(@) <= 1000; \
         "MaxLinesPerSecond must be in range 1 to 1000"
